@@ -1,0 +1,29 @@
+{
+  "name": "@edongashi/ipc",
+  "version": "0.1.0",
+  "description": "Message queue and pub/sub through redis.",
+  "main": "src/index.js",
+  "bin": {
+    "call": "./bin/call.js",
+    "cast": "./bin/cast.js",
+    "publish": "./bin/publish.js"
+  },
+  "dependencies": {
+    "@keyv/redis": "^2.1.2",
+    "cuid": "^2.1.8",
+    "keyv": "^4.0.3",
+    "minimist": "^1.2.5",
+    "node-redis-pubsub": "^4.0.0",
+    "redis-smq": "^2.0.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edongashi/ipc.git"
+  },
+  "author": "edongashi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/edongashi/ipc/issues"
+  },
+  "homepage": "https://github.com/edongashi/ipc#readme"
+}
