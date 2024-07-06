@@ -1,18 +1,18 @@
 #!/usr/bin/env node
-const { parseArgs } = require('../src/utils')
-const { call, shutdown } = require('../src')
+const { parseArgs } = require('../dist/utils');
+const { call, shutdown } = require('../dist');
 
-const [_node, _file, queue, ...args] = process.argv
-const parsedArgs = parseArgs(args)
-parsedArgs.$args = args
+const [_node, _file, queue, ...args] = process.argv;
+const parsedArgs = parseArgs(args);
+parsedArgs.$args = args;
 
 call(queue, parsedArgs).then(
   (result) => {
-    console.log(result)
-    shutdown()
+    console.log(result);
+    shutdown();
   },
   (error) => {
-    console.error(error)
-    shutdown()
-  }
-)
+    console.error(error);
+    shutdown();
+  },
+);

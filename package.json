@@ -1,20 +1,23 @@
 {
   "name": "@edongashi/ipc",
   "version": "0.1.0",
-  "description": "Message queue and pub/sub through redis.",
-  "main": "src/index.js",
+  "description": "Wrappers for redis.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "bin": {
     "call": "./bin/call.js",
     "cast": "./bin/cast.js",
     "publish": "./bin/publish.js"
   },
   "dependencies": {
-    "@keyv/redis": "^2.1.2",
-    "cuid": "^2.1.8",
-    "keyv": "^4.0.3",
-    "minimist": "^1.2.5",
-    "node-redis-pubsub": "^4.0.0",
-    "redis-smq": "^2.0.11"
+    "@keyv/redis": "^2.8.5",
+    "bullmq": "^5.8.4",
+    "ioredis": "^5.4.1",
+    "keyv": "^4.5.4",
+    "minimist": "^1.2.8"
   },
   "repository": {
     "type": "git",
@@ -25,5 +28,10 @@
   "bugs": {
     "url": "https://github.com/edongashi/ipc/issues"
   },
-  "homepage": "https://github.com/edongashi/ipc#readme"
+  "homepage": "https://github.com/edongashi/ipc#readme",
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^20.14.10",
+    "typescript": "^5.5.3"
+  }
 }

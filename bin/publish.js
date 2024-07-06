@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-const { parseArgs } = require('../src/utils')
-const { publish, shutdown } = require('../src')
+const { parseArgs } = require('../dist/utils');
+const { publish, shutdown } = require('../dist');
 
-const [_node, _file, queue, ...args] = process.argv
-const parsedArgs = parseArgs(args)
-parsedArgs.$args = args
+const [_node, _file, channel, ...args] = process.argv;
+const parsedArgs = parseArgs(args);
+parsedArgs.$args = args;
 
-publish(queue, parsedArgs).then(shutdown, (error) => {
-  console.error(error)
-  shutdown()
-})
+publish(channel, parsedArgs).then(shutdown, (error) => {
+  console.error(error);
+  shutdown();
+});
